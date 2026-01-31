@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Allison</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #fdf8f5 0%, #faf3ef 50%, #fceee8 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 22px 44px;
+      background: #f5e6df;
+      color: #b89085;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border-radius: 50px;
+      box-shadow: 0 4px 20px rgba(184, 144, 133, 0.15);
+      transition: all 0.3s ease;
+      border: 2px solid rgba(232, 210, 200, 0.6);
+    }
+
+    a.button:hover {
+      transform: scale(1.06);
+      box-shadow: 0 8px 30px rgba(184, 144, 133, 0.2);
+      background: #f0ddd5;
+    }
+
+    a.button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+  <a href="tell-you.html" class="button">Pookie! Click this button :)</a>
+</body>
+</html>

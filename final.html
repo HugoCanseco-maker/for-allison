@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Allison</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Cormorant+Garamond:wght@600;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #fdf8f5 0%, #faf3ef 50%, #fceee8 100%);
+      overflow-x: hidden;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Corner photo collage */
+    .corner-photo {
+      position: fixed;
+      width: 160px;
+      z-index: 10;
+    }
+
+    .corner-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 12px solid white;
+      border-radius: 4px;
+      box-shadow: 0 8px 24px rgba(150, 120, 110, 0.2);
+    }
+
+    .top-left {
+      top: 24px;
+      left: 24px;
+    }
+
+    .top-right {
+      top: 24px;
+      right: 24px;
+    }
+
+    .bottom-left {
+      bottom: 24px;
+      left: 24px;
+    }
+
+    .bottom-right {
+      bottom: 24px;
+      right: 24px;
+    }
+
+    /* Main center content */
+    .main-content {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 140px 40px;
+    }
+
+    .center-image {
+      width: 300px;
+      max-width: 85vw;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(150, 120, 110, 0.18);
+      margin-bottom: 28px;
+      display: block;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    .love-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #b89085;
+      text-align: center;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Corner collage images -->
+  <div class="corner-photo top-left">
+    <img src="assets/IMG_1761.JPG" alt="">
+  </div>
+  <div class="corner-photo top-right">
+    <img src="assets/C14BA5AB-2B4D-4347-A376-8AF3FF620775.JPG" alt="">
+  </div>
+  <div class="corner-photo bottom-left">
+    <img src="assets/E06B1789-E69A-436E-8F1C-C36780FB34FE.JPG" alt="">
+  </div>
+  <div class="corner-photo bottom-right">
+    <img src="assets/IMG_1752.PNG" alt="">
+  </div>
+
+  <div class="main-content">
+    <img src="assets/IMG_1752.PNG" alt="Loopy" class="center-image">
+    <h1 class="love-heading">I love you Allison!</h1>
+  </div>
+</body>
+</html>
