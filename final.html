@@ -117,8 +117,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 520px;
-      height: 620px;
+      width: 640px;
+      height: 780px;
       pointer-events: none;
       z-index: 0;
     }
@@ -126,12 +126,13 @@
     .heart-path {
       fill: none;
       stroke: #ff0000;
-      stroke-width: 5;
+      stroke-width: 6;
       stroke-linecap: round;
       stroke-linejoin: round;
       stroke-dasharray: 1;
       stroke-dashoffset: 1;
-      animation: drawHeart 2s ease-out 0.3s forwards;
+      animation: drawHeart 2.5s ease-out 0.3s forwards;
+      filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1));
     }
 
     @keyframes drawHeart {
@@ -164,9 +165,9 @@
 
   <div class="main-content">
     <div class="center-block">
-      <svg class="scribble-heart" viewBox="0 0 200 220" aria-hidden="true">
-        <!-- Large wobbly heart framing content: top dip → left loop → bottom point → right loop → back to top -->
-        <path class="heart-path" pathLength="1" d="M102 48 C98 22 50 18 46 52 C44 88 104 126 96 172 C102 130 154 86 150 52 C148 20 100 18 102 48" />
+      <svg class="scribble-heart" viewBox="0 0 400 440" aria-hidden="true">
+        <!-- Wobbly hand-drawn heart: top dip → wobbly left → bottom point → wobbly right → back to top -->
+        <path class="heart-path" pathLength="1" d="M205 92 C198 45 92 42 85 105 C79 168 195 252 188 342 C196 258 318 178 305 98 C299 35 201 38 205 92" />
       </svg>
       <img src="assets/IMG_1752.PNG" alt="Loopy" class="center-image">
       <h1 class="love-heading">I love you Allison!</h1>
