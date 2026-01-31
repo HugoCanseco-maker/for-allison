@@ -103,33 +103,47 @@
       }
     }
 
-    /* Heart orbit animation */
+    /* Center block with scribble heart frame */
     .center-block {
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 40px;
     }
 
-    .heart-orbit {
+    .scribble-heart {
       position: absolute;
       top: 50%;
       left: 50%;
-      font-size: 28px;
-      animation: orbitThenStop 9s ease-in-out forwards;
-      z-index: 5;
+      transform: translate(-50%, -50%);
+      width: 420px;
+      height: 460px;
+      pointer-events: none;
+      z-index: 0;
     }
 
-    @keyframes orbitThenStop {
-      0% {
-        transform: translate(-50%, -50%) rotate(0deg) translateY(-170px) rotate(0deg);
+    .heart-path {
+      fill: none;
+      stroke: #c41e50;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: drawHeart 2.5s ease-out 0.3s forwards;
+    }
+
+    @keyframes drawHeart {
+      to {
+        stroke-dashoffset: 0;
       }
-      65% {
-        transform: translate(-50%, -50%) rotate(1080deg) translateY(-170px) rotate(-1080deg);
-      }
-      100% {
-        transform: translate(-50%, -50%) translateY(-235px) translateX(-90px) rotate(0deg);
-      }
+    }
+
+    .center-block .center-image,
+    .center-block .love-heading {
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
@@ -150,7 +164,9 @@
 
   <div class="main-content">
     <div class="center-block">
-      <span class="heart-orbit" aria-hidden="true">❤️</span>
+      <svg class="scribble-heart" viewBox="0 0 100 110" aria-hidden="true">
+        <path class="heart-path" pathLength="1" d="M50 12 C50 12 18 28 18 52 C18 76 50 95 50 95 C50 95 82 76 82 52 C82 28 50 12 50 12 Z" />
+      </svg>
       <img src="assets/IMG_1752.PNG" alt="Loopy" class="center-image">
       <h1 class="love-heading">I love you Allison!</h1>
     </div>
