@@ -102,6 +102,35 @@
         transform: translateY(0);
       }
     }
+
+    /* Heart orbit animation */
+    .center-block {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .heart-orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 28px;
+      animation: orbitThenStop 9s ease-in-out forwards;
+      z-index: 5;
+    }
+
+    @keyframes orbitThenStop {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateY(-170px) rotate(0deg);
+      }
+      65% {
+        transform: translate(-50%, -50%) rotate(1080deg) translateY(-170px) rotate(-1080deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) translateY(-235px) translateX(-90px) rotate(0deg);
+      }
+    }
   </style>
 </head>
 <body>
@@ -120,8 +149,11 @@
   </div>
 
   <div class="main-content">
-    <img src="assets/IMG_1752.PNG" alt="Loopy" class="center-image">
-    <h1 class="love-heading">I love you Allison!</h1>
+    <div class="center-block">
+      <span class="heart-orbit" aria-hidden="true">❤️</span>
+      <img src="assets/IMG_1752.PNG" alt="Loopy" class="center-image">
+      <h1 class="love-heading">I love you Allison!</h1>
+    </div>
   </div>
 </body>
 </html>

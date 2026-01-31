@@ -54,11 +54,29 @@
     a.screen-link:hover .message {
       color: #a0786d;
     }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .click-hint {
+      font-size: 0.9rem;
+      color: #c4a99e;
+      opacity: 0.7;
+      font-style: normal;
+      font-weight: 400;
+    }
   </style>
 </head>
 <body>
   <a href="final.html" class="screen-link">
-    <span class="message">If i havent said this already i just wan to tell you.....</span>
+    <div class="content-wrapper">
+      <span class="message">If i havent said this already i just want to tell you.....</span>
+      <span class="click-hint">(Click the text)</span>
+    </div>
   </a>
 </body>
 </html>
